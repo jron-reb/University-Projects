@@ -1,0 +1,1 @@
+To recreate section 2.2 not only must the code for section 2.3 to be undone but the CFL should be set to 9 (initial value).
