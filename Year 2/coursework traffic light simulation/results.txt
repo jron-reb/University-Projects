@@ -1,0 +1,144 @@
+Parameter values: 
+	from left:
+		traffic arrival rate: 0.500000
+		traffic light period: 4
+	from right:
+		traffic arrival rate: 0.500000
+		traffic light period: 4
+Results (averaged over 100 runs):
+	from left:
+		number of vehicles: 197
+		average waiting time: 11
+		maximum waiting time: 27
+		clearance time: 14
+	from right:
+		number of vehicles: 199
+		average waiting time: 13
+		maximum waiting time: 31
+		clearance time: 18
+Parameter values: 
+	from left:
+		traffic arrival rate: 0.500000
+		traffic light period: 4
+	from right:
+		traffic arrival rate: 0.500000
+		traffic light period: 4
+Results (averaged over 100 runs):
+	from left:
+		number of vehicles: 198
+		average waiting time: 12
+		maximum waiting time: 30
+		clearance time: 17
+	from right:
+		number of vehicles: 199
+		average waiting time: 13
+		maximum waiting time: 31
+		clearance time: 18
+Parameter values: 
+	from left:
+		traffic arrival rate: 0.500000
+		traffic light period: 4
+	from right:
+		traffic arrival rate: 0.500000
+		traffic light period: 4
+Results (averaged over 100 runs):
+	from left:
+		number of vehicles: 199
+		average waiting time: 13
+		maximum waiting time: 31
+		clearance time: 18
+	from right:
+		number of vehicles: 201
+		average waiting time: 14
+		maximum waiting time: 32
+		clearance time: 20
+Parameter values: 
+	from left:
+		traffic arrival rate: 0.500000
+		traffic light period: 4
+	from right:
+		traffic arrival rate: 0.500000
+		traffic light period: 4
+Results (averaged over 100 runs):
+	from left:
+		number of vehicles: 200
+		average waiting time: 13
+		maximum waiting time: 32
+		clearance time: 19
+	from right:
+		number of vehicles: 199
+		average waiting time: 13
+		maximum waiting time: 32
+		clearance time: 18
+Parameter values: 
+	from left:
+		traffic arrival rate: 0.500000
+		traffic light period: 4
+	from right:
+		traffic arrival rate: 0.500000
+		traffic light period: 4
+Results (averaged over 100 runs):
+	from left:
+		number of vehicles: 200
+		average waiting time: 13
+		maximum waiting time: 32
+		clearance time: 17
+	from right:
+		number of vehicles: 199
+		average waiting time: 13
+		maximum waiting time: 31
+		clearance time: 18
+Parameter values: 
+	from left:
+		traffic arrival rate: 0.500000
+		traffic light period: 4
+	from right:
+		traffic arrival rate: 0.500000
+		traffic light period: 4
+Results (averaged over 100 runs):
+	from left:
+		number of vehicles: 200
+		average waiting time: 14
+		maximum waiting time: 32
+		clearance time: 20
+	from right:
+		number of vehicles: 201
+		average waiting time: 14
+		maximum waiting time: 33
+		clearance time: 21
+Parameter values: 
+	from left:
+		traffic arrival rate: 0.500000
+		traffic light period: 4
+	from right:
+		traffic arrival rate: 0.500000
+		traffic light period: 4
+Results (averaged over 100 runs):
+	from left:
+		number of vehicles: 199
+		average waiting time: 12
+		maximum waiting time: 29
+		clearance time: 17
+	from right:
+		number of vehicles: 199
+		average waiting time: 13
+		maximum waiting time: 30
+		clearance time: 18
+Parameter values: 
+	from left:
+		traffic arrival rate: 0.400000
+		traffic light period: 4
+	from right:
+		traffic arrival rate: 0.400000
+		traffic light period: 4
+Results (averaged over 100 runs):
+	from left:
+		number of vehicles: 160
+		average waiting time: 3
+		maximum waiting time: 13
+		clearance time: 2
+	from right:
+		number of vehicles: 159
+		average waiting time: 3
+		maximum waiting time: 13
+		clearance time: 1

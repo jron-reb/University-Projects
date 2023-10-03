@@ -1,0 +1,161 @@
+exec (acomp a) (0,s,[]) == (length (acomp a), s, [aval a s])
+
+Proof:
+
+When an arithmetic expression evaluates to a Val it is denoted by n, when it evaluates to a value it is denoted by v
+
+
+Case 1: the arithmetic expression a is a Val (denoted by n)
+
+exec (acomp n) (0,s,[])             
+exec [LOADI n] (0,s,[])            [applying acomp] 
+exec [] (iexec (LOADI n) (0,s,[])) [applying exec]
+exec [] (1,s,[n]) = (1,s,[n])      [applying iexec]
+(1,s,[n])                          [applying exec]
+
+
+(length (acomp n), s, [aval n s]) []
+(length [LOADI n], s, [aval n s])       [applying acomp]
+(1,s, [aval n s])                       [applying length]
+(1,s,[n])                               [applying aval]
+
+Therefore for the case where the arithmetic expression is equal to a value the statement holds true
+
+
+
+Case 2: the arithmetic expression a is a Vname (denoted by v)
+exec (acomp v) (0,s,[])
+exec ([LOAD v]) (0,s,[])                [applying acomp]
+exec [] (iexec (LOAD v)) (0,s,[]))      [applying exec]
+exec [] (1,s,[v ! stack])               [applying iexec]
+(1,s,[v ! stack])                       [applying exec]
+(1,s,[n])                                [applying !]
+
+
+(length (acomp v), s, [aval v s])
+(length [LOAD v], s, [aval v s])    [applying acomp]
+(1,s, [aval v s])                   [applying length]
+(1,s,[v ! stack])                   [applying aval]
+(1,s,[n])                           [applying !]
+
+Therefore for the case where the arithmetic expression is equal to a Vname the statement holds true
+
+
+
+Case 3: the arithmetic expression a is equal to Plus a1 a2                                 
+exec (acomp Plus a1 a2) (0,s,[])
+exec ([head (acomp a1), head (acomp a2), ADD]) (0,s,[])     [applying acomp]
+
+
+(length (acomp Plus a1 a2), s, [aval (Plus a1 a2) s])
+(length [head (acomp a1), head (acomp a2), ADD], s, [aval (Plus a1 a2) s]) [applying acomp]
+
+Depending on the type of arithmetic expression there are 4 different possibilities for what can happen next examined in case 3.a,3.b,3.c,3.d
+
+
+
+Case 3.a: the arithmetic expression a1 and a2 is a Val (denoted by n1 and n2)
+exec ([head (acomp a1), head (acomp a2), ADD]) (0,s,[])
+exec ([head [LOADI n1], head [LOADI n2], ADD]) (0,s,[])     [applying acomp twice]
+exec ([LOADI n1, LOADI n2, ADD]) (0,s,[])                   [applying head twice]
+exec [LOADI n2, ADD] (iexec (LOAD n1) (0,s,[]))             [applying exec]
+exec [LOADI n2, ADD] (1,s,[n1])                             [applying iexec]
+exec [ADD] (iexec (LOADI n2) (1,s,[n1]))                    [applying exec]
+exec [ADD] (2,s,[n2,n1])                                    [applying iexec]
+exec [] (iexec (ADD) (2,s,[n2,n1]))                         [applying exec]
+exec [] (3,s,[n2+n1])                                       [applying iexec]
+(3,s,[n2+n1])                                               [applying exec]
+
+
+(length [head (acomp a1), head (acomp a2), ADD], s, [aval (Plus a1 a2) s])
+(length [head [LOADI n1], head [LOADI n2], ADD], s, [aval (Plus a1 a2) s])  [applying acomp twice]
+(length [LOADI n1, LOADI n2, ADD], s, [aval (Plus a1 a2) s])                [applying head twice]
+(3, s, [aval (Plus a1 a2) s])                                               [applying length]
+(3, s, [aval a1 s + aval a2 s])                                             [applying aval]
+(3, s, [n1 + n2])                                                           [applying aval twice]
+(3,s, [n2+n1])                                                              [addition is transitive]
+
+Therefore for the case where the arithmetic expression is equal to Plus a1 and a2 where a1 and a2 are a Val the statement holds true   
+
+
+
+Case 3.b: = Plus Val Vname
+exec ([head (acomp a1), head (acomp a2), ADD]) (0,s,[])
+exec (head [LOADI n], head [LOAD v], ADD]) (0,s,[])     [applying acomp twice]
+exec ([LOADI n, LOAD v, ADD]) (0,s,[])                  [applying head twice]
+exec [LOAD v, ADD] (iexec (LOADI n) (0,s,[]))           [applying exec]
+exec [LOAD v, ADD] (1,s,[n1])                           [applying iexec]
+exec [ADD] (iexec (LOAD v) (1,s,[n1]))                  [applying exec]
+exec [ADD] (2,s,[v ! stack, n1])                        [applying iexec]
+exec [] (iexec (ADD) (2,s,[v ! stack, n1]))             [applying exec]
+exec [] (3,s,[(v ! stack + n1)])                        [applying iexec]
+(3,s,[(v ! stack + n1)])                                [applying exec]
+3,s,[n2+n1])                                            [applying !]
+
+
+(length [head (acomp a1), head (acomp a2), ADD], s, [aval (Plus a1 a2) s])
+(length [head [LOADI n], head [LOAD v], ADD], s, [aval (Plus a1 a2) s])     [applying acomp twice]
+(length [LOADI n, LOAD v, ADD], s, [aval (Plus a1 a2) s])                   [applying head twice]
+(3, s, [aval (Plus a1 a2) s])                                               [applying length]
+(3, s, [aval a1 s + aval a2 s])                                             [applying aval]
+(3, s, [n1 + v ! stack])                                                    [applying aval twice]
+(3,s, [v ! stack+n1])                                                       [because addition is transitive]
+(3,s,[n2+n1])                                                               [applying !]
+
+Therefore for the case where the arithmetic expression is equal to Plus a1 a2 and a1 is a Val and a2 is a Vname the statement holds true
+
+
+
+Case 3.c: = Plus Vname Val
+exec ([head (acomp a1), head (acomp a2), ADD]) (0,s,[])
+exec (head [LOAD v], head [LOADI n], ADD]) (0,s,[])             [applying acomp twice]
+exec ([LOAD v, LOADI n, ADD]) (0,s,[])                          [applying head twice]
+exec [LOADI n, ADD] (iexec (LOAD v) (0,s,[]))                   [applying exec]
+exec [LOADI n, ADD] (1,s,[v ! stack])                           [applying iexec]
+exec [ADD] (iexec (LOADI n) (1,s,[v ! stack]))                  [applying exec]
+exec [ADD] (2,s,[n1,v ! stack])                                 [applying iexec]
+exec [] (iexec (ADD) (2,s,[n1,v ! stack]))                      [applying exec]
+exec [] (3,s[n1 + v ! stack])                                   [applying iexec]
+(3,s[n1 + v ! stack])                                           [applying exec]
+(3,s[n1+n2])                                                    [applying !]
+
+
+(length [head (acomp a1), head (acomp a2), ADD], s, [aval (Plus a1 a2) s])
+(length [head [LOAD v], head [LOADI n], ADD], s, [aval (Plus a1 a2) s])     [applying acomp twice]
+(length [LOAD v, LOADI n1, ADD], s, [aval (Plus a1 a2) s])                  [applying head twice]
+(3, s, [aval (Plus a1 a2) s])                                               [applying length]
+(3, s, [aval a1 s + aval a2 s])                                             [applying aval]
+(3, s, [v ! stack + n1])                                                    [applying aval twice]
+(3,s, [n1+v ! stack])                                                       [addition is transitive]
+(3,s, [n1+n2])                                                              [applying !]
+
+Therefore for the case where the arithmetic expression is equal to Plus a1 and a2 where a1 is a Vname and a2 is a Val the statement holds true
+
+
+
+Case 3.d: = Plus Vname Vname
+exec ([head (acomp a1), head (acomp a2), ADD]) (0,s,[])
+exec ( head[LOAD v1], head[LOAD v2], ADD]) (0,s,[])    [applying acomp twice]
+exec ([LOAD v1, LOAD v2, ADD]) (0,s,[])                 [applying head twoce]
+exec [LOAD v2, ADD] (iexec (LOAD v1) (0,s,[]))  [applying exec]
+exec [LOAD v2, ADD]  (1,s,[v1 ! stack]) [applying iexec]
+exec [ADD] (iexec (LOAD v2) (1,s,[v1 ! stack])    [applying exec]
+exec [ADD] (2,s,[v2 ! stack,v1 ! stack])    [applying iexec]
+exec [] (iexec (ADD) (2,s,[v2 ! stack,v1 ! stack]) [applying exec]
+exec [] (3,s [v2 ! stack + v1 ! stack])         [applying iexec]
+(3,s [v2 ! stack + v1 ! stack])                 [applying exec]
+(3,s,[n2+n1])                                   [applying !]
+
+
+(length [head (acomp a1), head (acomp a2), ADD], s, [aval (Plus a1 a2) s])
+(length [head [LOAD v1], head [LOAD v2], ADD], s, [aval (Plus a1 a2) s])        [applying acomp twice]
+(length [LOAD v1, LOADI v2, ADD], s, [aval (Plus a1 a2) s])                     [applying head twice]
+(3, s, [aval (Plus a1 a2) s])                                                   [applying length]
+(3, s, [aval a1 s + aval a2 s])                                                 [applying aval]
+(3, s, [v1 ! stack + v2 ! stack])                                               [applying aval twice]
+(3,s, [v2 ! stack + v1 ! stack])                                                [addition is transitive]
+(3,s, [v2+v1])                                                                  [applying !]
+
+Therefore for the case where the arithmetic expression is equal to Plus a1 and a2 where a1 and a2 are a Vname the statement holds true
+
+Therefore the statement that exec (acomp a) (0,s,[]) == (length (acomp a), s, [aval a s]) is proven true. This is because for each case where a valid input is given the same result is achieved. In the case where the arithmetic expression contains nested arithmetic expressions such as Plus (Plus a1 a2) a3. Then the arithmetic expression is simplified because the most inner Plus will be solved and will return an arithmetic expression (Val). This will continue to repeat until the final result Plus a1 a2 is reached and the case 3.x can be resolved to true.
