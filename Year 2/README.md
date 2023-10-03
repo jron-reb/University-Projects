@@ -3,6 +3,7 @@
 ##Haskell Coursework
 
 This was to create a low level compiler in Haskell. This allowed the user to store and remove values. It allowed the comparison of those values and was able to complete further operations based on the comparisons. It was also able to take in a queue of instructions involving these comparisons, storage and removal of values as well as a jump operation allowing skipping of these values if necessary.
+This was to cement the knowledge on functional programming and how it can be used.
 
 ## Software Development coursework
 This was to create a game where players would select pebbles with a number on them and win based on the sum. The goal was to use multi-threading to do so and in get an introduction to parallel computing.
