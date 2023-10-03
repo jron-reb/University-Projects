@@ -1,0 +1,12 @@
+Assistant, date, status
+assistant1, 26/02/2021 07:00, BUSY
+assistant1, 26/02/2021 08:00, BUSY
+assistant1, 26/02/2021 09:00, FREE
+                                  
+assistant2, 26/02/2021 07:00, BUSY
+assistant2, 26/02/2021 08:00, FREE
+assistant2, 26/02/2021 09:00, FREE
+                                  
+assistant3, 26/02/2021 07:00, BUSY
+assistant3, 26/02/2021 08:00, FREE
+assistant3, 26/02/2021 09:00, FREE

@@ -1,0 +1,81 @@
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: .860fr repeat(6, 1fr);
+}
+
+.h1-container { grid-area: 1 / 2 / 2 / 5; }
+.navigation-bar-container { grid-area: 2 / 2 / 7 / 3; }
+.report-infection { grid-area: 2 / 3 / 3 / 5; }
+.please-report-message { grid-area: 3 / 3 / 4 / 5; }
+.report-infection-form-container { grid-area: 4 / 3 / 7 / 5; }
+.watermark{ grid-area: 2 / 3 / 7 / 5; }
+
+div.watermark{
+      z-index: -1;
+      text-align: center
+    }
+
+img.watermark{
+  margin-top: 7%;
+      position:relative;
+      text-align: center;
+      height: 80%;
+      width: 70%;
+      z-index: -2;
+      opacity: 0.3;
+}
+
+img.map{
+      position:relative;
+      text-align: center;
+      height: 100%;
+      width: 90%;
+      border: 3px solid black;
+}
+
+.add-visit-form-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: .5em;
+  grid-template-areas:
+  "date-container date-container"
+  "time-container time-container"
+  "report-container reset-container"
+}
+
+.time-container{
+  grid-area:time-container;
+  justify-self: center;
+}
+
+.date-container{
+  grid-area:date-container;
+  justify-self: center;
+}
+
+.report-container{
+  grid-area:report-container;
+  justify-self: left;
+}
+
+.reset-container{
+  grid-area:reset-container;
+  justify-self: right;
+}
+
+.please-report-message{
+  justify-content: center;
+  text-align: center;
+}
+
+.report-infection-form-container{
+  margin-top: -50px;
+  text-align: center;
+}
+
+.add-visit-form{
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+}

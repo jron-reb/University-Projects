@@ -1,0 +1,91 @@
+h1{
+    display: block;
+    height: 2cm;
+    line-height:2cm;
+    font-family:Arial;
+    font-size:40; /*represents a font-size of 40 in word, using 40pt creates a larger than desired font*/
+    font-weight:bold;
+    text-align:center;
+    vertical-align: center;
+    background-color:rgb(173,185,202);
+    margin: auto auto;
+    }
+
+h3{
+  font-family:Arial;
+  font-size:24;
+  text-align:center;
+  font-weight: normal;
+}
+
+hr {
+  margin-right: 22px;
+  height: 1px;
+  background-color: black;
+  border-color: black;
+}
+
+
+.input-box{
+  width:5cm;
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.input-box::placeholder{
+  color:black;
+  font-family: TimesNewRoman;
+  font-size:20;
+  opacity: 1;
+}
+
+.button{
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  padding: 0.5rem 2rem;
+}
+
+.text {
+  text-align: center;
+  justify-content: center;
+  font-family: TimesNewRoman;
+  font-size:20;
+  margin-right: 50px;
+}
+
+ul.navigation-bar{
+  list-style-type: none;
+  background-color: rgb(173,185,202);
+  margin: 0;
+  margin-right: 100px;
+  padding: 0.000001rem;
+  text-align: center;
+
+}
+
+li.not-selected{
+  padding-top: 20px;
+  padding-bottom: 10px;
+  vertical-align: center;
+}
+
+li.selected{
+  background-color: rgb(132,151,176);
+  padding-top: 20px;
+  padding-bottom: 10px;
+  vertical-align: center;
+}
+
+ul.navigation-bar a{
+  text-decoration: none;
+  font-family: Arial;
+  font-size: 20;
+  color: black;
+}
+
+li.end{
+  padding-top: 100px;
+}

@@ -1,0 +1,110 @@
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: .860fr repeat(6, 1fr);
+}
+
+.h1-container { grid-area: 1 / 2 / 2 / 5; }
+.navigation-bar-container { grid-area: 2 / 2 / 7 / 3; }
+.add-visit { grid-area: 2 / 3 / 3 / 5; }
+.add-visit-form-container { grid-area: 3 / 3 / 7 / 4; }
+.map { grid-area: 3 / 4 / 6 / 5; }
+.marker { grid-area: 3 / 4 / 6 / 5; }
+.watermark{ grid-area: 2 / 3 / 7 / 5; }
+
+div.watermark{
+      z-index: -1;
+      text-align: center
+    }
+
+img.watermark{
+  margin-top: 7%;
+      position:relative;
+      text-align: center;
+      height: 70%;
+      width: 70%;
+      z-index: -2;
+      opacity: 0.3;
+}
+
+img.map{
+      position:relative;
+      text-align: center;
+      height: 100%;
+      width: 90%;
+      border: 3px solid black;
+}
+
+.marker_black{
+  z-index: -1;
+}
+img.black_marker{
+  position: absolute;
+  text-align: center;
+  padding: 70px;
+  padding-left: 120px;
+  height: 2.2%;
+  width: 1%;
+  z-index: -1
+}
+
+.add-visit-form{
+  align-items: center;
+  justify-content: center;
+}
+
+.add-visit-form-grid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: .5em;
+  grid-template-areas:
+  "date-container"
+  "time-container"
+  "duration-container"
+  "."
+  "."
+  "."
+  "."
+  "."
+  "."
+  "."
+  "."
+  "."
+  "."
+  "."
+  "add-container"
+  "reset-container"
+}
+
+.date-container{
+  grid-area:date-container;
+  justify-self: center;
+}
+
+.time-container{
+  grid-area:time-container;
+  justify-self: center;
+}
+
+.duration-container{
+  grid-area:duration-container;
+  justify-self: center;
+}
+
+.add-container{
+  grid-area:add-container;
+  justify-self: center;
+}
+
+.reset-container{
+  grid-area:reset-container;
+  justify-self: center;
+}
+
+.input-box{
+  width: 5cm;
+  }
+
+.button{
+  width: 5.3cm;
+}

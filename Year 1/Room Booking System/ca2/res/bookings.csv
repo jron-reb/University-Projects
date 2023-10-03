@@ -1,0 +1,10 @@
+BookableRoom, AssistantOnShift, StudentEmail, Status(optional)
+bookableRoom1, assistantOnShift1, matpic@uok.ac.uk, COMPLETED
+bookableRoom2, assistantOnShift2, jack@uok.ac.uk
+bookableRoom3, assistantOnShift3, sam@uok.ac.uk
+bookableRoom4, assistantOnShift4, jasper@uok.ac.uk
+bookableRoom5, assistantOnShift5, samantha@uok.ac.uk
+bookableRoom6, assistantOnShift6, mathew@uok.ac.uk
+bookableRoom5, assistantOnShift7, matteo@uok.ac.uk
+bookableRoom8, assistantOnShift8, susie@uok.ac.uk
+bookableRoom9, assistantOnShift9, eloise@uok.ac.uk

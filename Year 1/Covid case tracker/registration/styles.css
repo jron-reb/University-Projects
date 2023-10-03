@@ -1,0 +1,74 @@
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.h1-container{ grid-area: 1 / 2 / 2 / 5; }
+
+.registration-form-container{grid-area: 2 / 2 / 5 / 5;}
+
+.watermark{grid-area: 2 / 2 / 5 / 5;}
+
+.registration-form{
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.registration-form-grid-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: .5em;
+  grid-template-areas:
+  "firstname-container"
+  "lastname-container"
+  "username-container"
+  "password-container"
+  "."
+  "register-container"
+}
+
+.firstname-container{
+  grid-area:firstname-container;
+  justify-self: center;
+}
+
+.lastname-container{
+  grid-area:lastname-container;
+  justify-self: center;
+}
+
+.username-container{
+  grid-area:username-container;
+  justify-self: center;
+}
+
+.password-container{
+  grid-area:password-container;
+  justify-self: center;
+}
+
+.register-container{
+  grid-area:register-container;
+  justify-self: center;
+}
+
+#register-button{
+  width: 5.3cm;
+}
+
+div.watermark{
+      z-index: -1;
+      text-align: center
+    }
+
+img.watermark{
+      position:relative;
+      text-align: center;
+      height: 90%;
+      width: 50%;
+      z-index: -2;
+      opacity: 0.3;
+}

@@ -1,0 +1,25 @@
+These commands were input to phpmyadmin using XAMMP to host a local server. I don't know exactly how they will translate but I hope it works!
+
+
+
+CREATE TABLE users (
+    usersId int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    usersName varchar(128) NOT NULL,
+    usersUid varchar(128) NOT NULL,
+    usersPwd varchar(128) NOT NULL
+);
+
+CREATE TABLE infections (
+    usersId int(11) NOT NULL,
+    usersDate varchar(128) NOT NULL,
+    usersTime varchar(128) NOT NULL
+);
+
+CREATE TABLE visits (
+    usersId int(11) NOT NULL,
+    visitDate varchar(128) NOT NULL,
+    visitTime varchar(128) NOT NULL,
+    visitDuration varchar(128) NOT NULL,
+    visitXCoord varchar(128) NOT NULL,
+    visitYCoord varchar(128) NOT NULL
+);

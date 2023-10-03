@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COVID-CT: Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/master.css">
+</head>
+<body>
+  <div class="content-container">
+    <div class="h1-container">
+        <h1 class="header">COVID - 19 Contact Tracing</h1>
+    </div>
+
+    <div class="watermark">
+        <img class="watermark" src="../images/watermark.png" alt="Covid molecule">
+    </div>
+
+    <div class="login-form-container">
+
+    <form id="login-form" class="login-form" action="login-handler.php" method="post">
+      <div class="login-form-grid-container">
+
+        <div class="username-container">
+          <label>
+            <input type="text" class="input-box username" name="username" placeholder="Username" required>
+          </label>
+
+        </div>
+
+        <div class="password-container">
+          <label>
+            <input type="password" class="input-box password" name="password" placeholder="Password" required>
+          </label>
+
+        </div>
+
+        <div class="submit-container">
+          <label>
+            <input type="submit" name="submit" class="button submit-button" value="Login">
+          </label>
+
+        </div>
+
+        <div class="reset-container">
+          <label>
+            <input type="reset" class="button reset-button" name="cancel" value="Cancel">
+          </label>
+
+        </div>
+
+        <div class="register-container">
+          <button id="register-button" class="button register-button">Register</button>
+
+
+        </div>
+
+        </div>
+    </form>
+
+    </div>
+
+
+  </div>
+
+</body>
+</html>

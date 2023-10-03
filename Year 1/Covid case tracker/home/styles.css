@@ -1,0 +1,57 @@
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.h1-container { grid-area: 1 / 2 / 2 / 5; }
+.navigation-bar-container { grid-area: 2 / 2 / 7 / 3; }
+.status { grid-area: 2 / 3 / 3 / 5; }
+.infection-text { grid-area: 3 / 3 / 5 / 4; }
+.marker-text { grid-area: 5 / 3 / 7 / 4; }
+.map { grid-area: 3 / 4 / 6 / 5; }
+.marker { grid-area: 3 / 4 / 6 / 5; }
+.watermark{ grid-area: 2 / 3 / 7 / 5; }
+
+.text {
+  text-align: center;
+  justify-content: center;
+  font-family: TimesNewRoman;
+  margin-right: 50px;
+}
+
+.navigation-bar-container{
+  margin-top: -14px;
+}
+
+img.exeter{
+      position:relative;
+      text-align: center;
+      height: 100%;
+      width: 90%;
+      border: 3px solid black;
+}
+
+img.black_marker{
+  position: absolute;
+  text-align: center;
+  padding: 70px;
+  padding-left: 120px;
+  height: 2.2%;
+  width: 1%;
+}
+
+div.watermark{
+      z-index: -1;
+      text-align: center
+    }
+
+img.watermark{
+  margin-top: 7%;
+      position:relative;
+      text-align: center;
+      height: 70%;
+      width: 70%;
+      z-index: -2;
+      opacity: 0.3;
+}

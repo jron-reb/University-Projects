@@ -1,0 +1,100 @@
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.h1-container{ grid-area: 1 / 2 / 2 / 5; }
+
+.login-form-container{ grid-area: 2 / 2 / 5 / 5; }
+
+.watermark { grid-area: 2 / 2 / 5 / 5;}
+
+
+.login-form{
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.login-form-grid-container{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2.5rem 4rem 2.5rem;
+  grid-template-areas:
+  "username-container username-container"
+  "password-container password-container"
+  "submit-container reset-container "
+  "register-container register-container"
+}
+
+.username-container{
+  grid-area:username-container;
+  justify-self: center;
+}
+
+.password-container{
+  grid-area:password-container;
+  justify-self: center;
+}
+.submit-container{
+  grid-area:submit-container;
+  justify-self: right;
+  margin-right: 4px
+}
+.reset-container{
+  grid-area:reset-container;
+  justify-self: left;
+  margin-left: 5px
+}
+.register-container{
+  grid-area:register-container;
+  justify-self: center;
+}
+
+input[type=reset] {
+display: block;
+margin-right: auto;
+margin-left: auto;
+padding: 5px;
+width:2.5cm;
+text-align: center;
+}
+
+input[type=submit] {
+display: block;
+margin-right: auto;
+margin-left: auto;
+padding: 5px;
+width:2.5cm;
+text-align: center;
+}
+
+#register-button{
+  width: 5.2cm;
+}
+
+div.watermark{
+      z-index: -1;
+      text-align: center
+    }
+
+img.watermark{
+      position:relative;
+      text-align: center;
+      height: 90%;
+      width: 50%;
+      z-index: -2;
+      opacity: 0.3;
+}
+
+.a{
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  }
