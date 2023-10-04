@@ -1,4 +1,4 @@
-#Year 3 Projects
+# Year 3 Projects
 
 ## Stock Market Analysis (Python, Scikit-learn, Data Science)
 The Shenzhen and Shanghai stock exchanges are close in geography and therefore linked with one another, with arbitrage between the 2 exchanges being commonplace. This coursework was the analysis of the data of these markets and extracting trends that could be applied to make a profit.
