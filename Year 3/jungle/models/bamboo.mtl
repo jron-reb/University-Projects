@@ -1,0 +1,228 @@
+newmtl ball
+Ka 0 0 0
+Kd 0.784314 0.784314 0.862745
+Ks 0.35 0.35 0.35
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl blackhand
+Ka 0 0 0
+Kd 0 0 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl blackknob
+Ka 0 0 0
+Kd 0 0 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl blackplastic
+Ka 0 0 0
+Kd 0 0 0
+Ks 0.71 0.71 0.71
+Ni 1
+Ns 625
+Tf 1 1 1
+d 1
+
+newmtl blackring
+Ka 0 0 0
+Kd 0 0 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl clockface
+Ka 0 0 0
+Kd 0.744793 0.741955 0.568048
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl Gear
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl glass
+Ka 0 0 0
+Kd 0.395834 0.395834 0.395834
+Ks 1 1 1
+Ni 1
+Ns 810
+Tf 1 1 1
+d 0.125
+
+newmtl ground
+Ka 0 0 0
+Kd 1 0.976211 0.938277
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl hardmetal
+Ka 0 0 0
+Kd 0.784314 0.784314 0.862745
+Ks 0.35 0.35 0.35
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl lightbox
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl metalring
+Ka 0 0 0
+Kd 0.395834 0.395834 0.395834
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl metalscrew
+Ka 0 0 0
+Kd 0.784314 0.784314 0.862745
+Ks 0.35 0.35 0.35
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl metalshell
+Ka 0 0 0
+Kd 0.676783 0.683253 0.570092
+Ks 0.35 0.35 0.35
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl neon
+Ka 0 0 0
+Kd 0.621683 0.877607 0.336538
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl redhand
+Ka 0 0 0
+Kd 0.723964 0.0844739 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl secondhand
+Ka 0 0 0
+Kd 0.784314 0.784314 0.862745
+Ks 0.35 0.35 0.35
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl secondhandknob
+Ka 0 0 0
+Kd 0.784314 0.784314 0.862745
+Ks 0.35 0.35 0.35
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl shell
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl shinymetal
+Ka 0 0 0
+Kd 0.784314 0.784314 0.862745
+Ks 0.35 0.35 0.35
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl shinymetalstand
+Ka 0 0 0
+Kd 0.784314 0.784314 0.862745
+Ks 0.35 0.35 0.35
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl bamboo
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+map_Kd bambootex.jpg
+
+newmtl ground
+Ka 1 1 1 
+Kd 0.784314 0.784314 0.784314
+Ks 1 1 1
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+map_Kd greatgrass.psd
+
+newmtl bamboo
+Ka 1 1 1
+Kd 0.784314 0.784314 0.784314
+Ks 1 1 1
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+map_Kd bambootex.jpg
+
+newmtl lightbox
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
